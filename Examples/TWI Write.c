@@ -1,4 +1,4 @@
-const uint8_t registerTX[] = {0x4B, 0x83}; // GLOBAL
+const uint8_t registerTX[] = {0x4B, 0x83}; // GLOBAL - Pointer Byte + Data Byte value
 
 ret_code_t tx_code = nrf_drv_twi_tx(&m_twi, 0x10, &registerTX, 2, false);
 
