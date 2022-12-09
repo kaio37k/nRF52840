@@ -2,7 +2,7 @@ uint8_t registerRX[] = {7}; // GLOBAL - Set to 7 (not 0) so it is easy to pick u
 
 const uint8_t registerTX[] = {0x4D}; // Pointer Byte
 
-ret_code_t tx_code = nrf_drv_twi_tx(&m_twi, 0x10, &registerTX, 1, true);
+ret_code_t tx_code = nrf_drv_twi_tx(&m_twi, 0x10, &registerTX, 1, true); // Setting Pointer
 
 ret_code_t rx_code = nrf_drv_twi_rx(&m_twi, 0x10, registerRX, 1);
 
