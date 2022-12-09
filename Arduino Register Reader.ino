@@ -7,7 +7,7 @@ void setup() {
   delay(100);
 
   Serial.println("Setup Started");
-  // Wire.write(0x07); // DONE
+  // Wire.write(0x07);
 
 }
 
