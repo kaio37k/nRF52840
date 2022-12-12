@@ -10,3 +10,6 @@ printf("TX Code:\t%d\n", tx_code);
 printf("RX Code:\t%d\n", rx_code);
 
 printf(registerRX[0]);
+
+// NOTE:
+// Single read does not mean reading only one thing, it means reading one thing ... at a time.
