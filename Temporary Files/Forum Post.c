@@ -69,7 +69,6 @@ int main(void)
 
     nrf_delay_ms(2500);
 
-
     a1 = bmm150_interface_selection(&dev);
     printf("rslt A1:\t%d\n", a1);
 
@@ -94,27 +93,13 @@ int main(void)
     printf("Dev->int_status:\t%d\n", dev.int_status);
     printf("BMM150_INT_ASSRTED_DRDY:\t%d\n", BMM150_INT_ASSERTED_DRDY);
 
-
-
     //================================
     //    Startup Config Functions
     //================================
-
-    /*
-    mySettings.data_rate = BMM150_DATA_RATE_10HZ;
-    mySettings.xyz_axes_control = BMM150_XYZ_CHANNEL_ENABLE;
     
-    bmm150_set_sensor_settings(BMM150_SEL_DATA_RATE, &mySettings, &dev);
-    */
-    
-
     printf("Mag X:\t%d\n", mag_data.x);
     printf("Mag Y:\t%d\n", mag_data.y);
     printf("Mag Z:\t%d\n", mag_data.z);
-
-    uint8_t regValTemp[8] = {0};
-
-    checkAllRegisters();
 
     while(true){
 
