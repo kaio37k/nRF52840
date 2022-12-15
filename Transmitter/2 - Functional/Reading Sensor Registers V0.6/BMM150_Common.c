@@ -138,12 +138,17 @@ int8_t bmm150_user_i2c_reg_write(uint8_t reg_addr, const uint8_t *reg_data, uint
  * @brief This function is for reading the sensor's registers through I2C bus.
  */
 int8_t bmm150_user_i2c_reg_read(uint8_t reg_addr, uint8_t *reg_data, uint32_t length, void *intf_ptr)
-{
+{  
 
-    nrf_drv_twi_tx(&m_twi, 0x10, reg_addr, 1, false);
-    nrf_drv_twi_rx(&m_twi, 0x10, reg_data, 1);
+    uint8_t register_addr[1] = {reg_addr};
+    uint8_t register_value[1] = {7};
+
+    nrf_drv_twi_tx(&m_twi, 0x10, &register_addr, 1, true);
+    nrf_drv_twi_rx(&m_twi, 0x10, register_value, 1);
 
     printf("bmm150_user_i2c_reg_read\n");
+
+    printf("Register Value:\t%x\n", register_value[0]);
 
     //Read from registers using I2C. Return 0 for a successful execution.
     return 0;
