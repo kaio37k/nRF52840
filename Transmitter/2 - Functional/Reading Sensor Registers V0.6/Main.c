@@ -62,7 +62,10 @@ int main(void)
 
       writeRegister(0x4b, 0x01);
 
-      readOneRegister(0x4b);
+      //readOneRegister(0x4b);
+
+      uint8_t tempDataStorage[1];
+      bmm150_user_i2c_reg_read(0x4C, tempDataStorage, 1, 0);
 
     while(false){
 
