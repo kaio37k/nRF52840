@@ -76,6 +76,7 @@ int main(void)
       //readOneRegister(0x4c);
       
       bmm150_user_i2c_reg_read(0x4c, &tempDataStorage, 1, 0); // Added Pointer to array
+//                                    v-- this value MUST be written as a decimal.
       bmm150_user_i2c_reg_write(0x4c, 4, 1, 0);
       bmm150_user_i2c_reg_read(0x4c, &tempDataStorage, 1, 0); // Added Pointer to array
       printf("-------------\n");
