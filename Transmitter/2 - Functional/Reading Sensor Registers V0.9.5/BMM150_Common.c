@@ -171,28 +171,12 @@ int8_t bmm150_user_i2c_reg_read(uint8_t reg_addr, uint8_t *reg_data, uint32_t le
     ret_code_t error_report_read1;
     ret_code_t error_report_read2;
 
-    uint8_t register_addr = reg_addr;
-    uint8_t register_value[20];
-
     error_report_read1 = nrf_drv_twi_tx(&m_twi, 0x10, &reg_addr, 1, false);
     error_report_read2 = nrf_drv_twi_rx(&m_twi, 0x10, reg_data, length); // HAS TO BE ARRAY TYPE
 
     printf("Size of read array:\t\t%d\n", length);
     printf("Register Address:\t\t%x\n", reg_addr);
     printf("Register Data 0:\t\t%x\n", reg_data[0]);
-
-    //reg_data[0] = register_value[0];
-    //reg_data[1] = register_value[1];
-    //reg_data[2] = register_value[2];
-    //reg_data[3] = register_value[3];
-    //reg_data[4] = register_value[4];
-    //reg_data[5] = register_value[5];
-    //reg_data[6] = register_value[6];
-    //reg_data[7] = register_value[7];
-    //reg_data[8] = register_value[8];
-    //reg_data[9] = register_value[9];
-    //reg_data[10] = register_value[10];
-    //reg_data[11] = register_value[11];
 
     if(error_report_read1!=0||error_report_read2!=0){
       printf("Error Report 1:\t%x\n", error_report_read1);
