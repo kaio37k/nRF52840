@@ -1,3 +1,13 @@
+### TODO:
+- Make updateable with variables for key settings
+  - OP Mode
+  - Preset Mode
+  - ODR
+  - X/Y & Z Sample Rates
+  - Compensated Values  
+- Integrate BLE
+- Integrate HID
+
 ### Working:
 - I2C read/write
 - Sensor Iniliatization
