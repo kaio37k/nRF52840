@@ -4,7 +4,8 @@
   - Preset Mode
   - ODR
   - X/Y & Z Sample Rates
-  - Compensated Values  
+  - ~Compensated Values~
+- Remove any non-startup related `printf()` functions
 - Integrate BLE
 - Integrate HID
 
