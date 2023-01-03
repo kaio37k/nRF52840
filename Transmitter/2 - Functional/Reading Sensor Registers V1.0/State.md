@@ -3,6 +3,7 @@
   - OP Mode
   - Preset Mode
   - ODR
+  - Chip update rate
   - X/Y & Z Sample Rates
   - ~Compensated Values~
 - Remove any non-startup related `printf()` functions
